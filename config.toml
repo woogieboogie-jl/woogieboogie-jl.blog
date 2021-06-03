@@ -1,0 +1,4 @@
+baseURL = "https://woogieboogie-jl.github.io"
+languageCode = "en-us"
+title = "woogieboogie.dev"
+theme = "hugo-theme-console"
