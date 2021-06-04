@@ -31,7 +31,7 @@
 }
 
 :root {
-    --global-font-size: 16px;
+    --global-font-size: 14px;
     --global-font-color: #444;
     --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
     --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -74,7 +74,6 @@ body {
     font-family: var(--font-stack);
     font-size: var(--global-font-size);
     background-color: #fff;
-    margin-bottom: 75px;
 }
 
 h1,
@@ -161,9 +160,11 @@ figure {
 }
 
 .footer {
+    bottom: 0px;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    padding-top: 5px;
     clear: both;
-    margin-top: 100px;
-    padding-top: 10px;;
     border-top: 1px solid var(--secondary-color);
     color: var(--global-font-color);
 }
@@ -274,6 +275,21 @@ figure {
 
     .footer {
         margin-top: 50px;
-        padding-top: 5px;;
+        margin-bottom: 20px;
+        padding-top: 5px;
+        width: 100%;
+        bottom: 0px;
+        font-size: small;
     }
 }
+
+
+
+/* additional css customizations */
+
+
+.container-main {
+    padding-top: 100px;
+    min-height: 600px;
+}
+

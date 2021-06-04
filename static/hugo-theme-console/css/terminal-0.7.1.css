@@ -64,7 +64,7 @@ blockquote, code, em, strong {
     margin: 0;
     padding: 0;
 }
-.logo, blockquote, h1, ol, p, ul {
+.logo, blockquote, h1, ol, p{
     margin-top: calc(var(--global-space) * 2);
     margin-bottom: calc(var(--global-space) * 2);
 }
@@ -225,9 +225,14 @@ ol ol {
 .terminal-menu {
     width: 100%}
 .terminal-nav {
+    position: fixed;
+    width: 100%;
+    padding: 0px 5%;
+    border-bottom: solid 1px;
+    border-color: var(--secondary-color);
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+    background-color: white;
+    z-index: 10;
 }
 ul ul {
     margin-top: 0;
@@ -242,10 +247,10 @@ ul ul {
     flex-grow: 1;
     font-size: var(--global-font-size);
     margin-top: 0;
+    margin-bottom: 10px;
 }
 .terminal-menu li {
     display: flex;
-    margin: 0 0 .5em 0;
     padding: 0;
 }
 ol.terminal-toc li {
@@ -627,10 +632,6 @@ pre::-webkit-scrollbar {
     form {
     width: 100%}
 }@media only screen and (min-width:30em) {
-    .terminal-nav {
-    flex-direction: row;
-    align-items: center;
-}
 .terminal-menu ul {
     flex-direction: row;
     justify-items: flex-end;
