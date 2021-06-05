@@ -1,67 +1,58 @@
 {{ define "main" }}
 
-<h1>About</h1>
-
-<div>
-<span>I like to make stuff, therefore I studied architecture.</span>
-<br>
-<span>I like new things, therefore I started to learn coding.</span>
-<br>
-<span>I like money, therefore I started to look into cryptocurrency.</span>
-
-<a href="about/">(more)</a>
-</div>
-<br/>
-
-<h1>Development/</h1>
-
-<div class="posts-list">
-{{ with .Site.GetPage "/dev" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="dev">
-            <p>
+<div class="box-main">
+    <h1>#Development</h1>
+    <div class="posts-list">
+    {{ with .Site.GetPage "/dev" }}
+        {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+            <div class="dev">
                 <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>    
+                <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+                <p>{{ .Summary }}
+                    {{ if .Truncated }}
+                    <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+                    <a href="{{ .RelPermalink }}"> ....read more</a>
+                    {{ end }}
+                </p>
+                
+            </div>    
+        {{ end }}
     {{ end }}
-{{ end }}
+    </div>
 </div>
 
 
-
-<h1>Cryptocurrency/</h1>
-
-<div class="posts-list">
-{{ with .Site.GetPage "/crypto" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="crypto">
-            <p>
+<div class="box-main">
+    <h1>#Cryptocurrencies</h1>
+    <div class="posts-list">
+    {{ with .Site.GetPage "/crypto" }}
+        {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+            <div class="crypto">
                 <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
-        </div>    
+                <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+                <p>{{ .Summary }}</p>
+            </div>    
+        {{ end }}
     {{ end }}
-{{ end }}
+    </div>
 </div>
 
 
-<h1>Photos/</h1>
-
-<div class="image-grid">
-{{ with .Site.GetPage "/photos" }}
-    {{ range first 3 (sort .Data.Pages "Date" "desc")}}
-        <a href="{{ .Permalink }}" title="{{ .Title }}">
-        {{ $image := .Page.Resources.GetMatch .Params.image }}
-        {{ with $image }}
-            {{ $thumb := .Resize "400x" }}
-            <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
-        {{end}}
-        </a>
+<div class="box-main__last">
+    <h1>#Photos</h1>
+    <div class="image-grid">
+    {{ with .Site.GetPage "/photos" }}
+        {{ range first 3 (sort .Data.Pages "Date" "desc")}}
+            <a href="{{ .Permalink }}" title="{{ .Title }}">
+            {{ $image := .Page.Resources.GetMatch .Params.image }}
+            {{ with $image }}
+                {{ $thumb := .Resize "400x" }}
+                <img src="{{ $thumb.RelPermalink }}" alt="{{ .Title }}" class="img-responsive">
+            {{end}}
+            </a>
+        {{ end }}
     {{ end }}
-{{ end }}
+    </div>
 </div>
 
 {{ end }}

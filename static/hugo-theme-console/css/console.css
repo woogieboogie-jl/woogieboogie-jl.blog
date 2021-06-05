@@ -1,30 +1,46 @@
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Regular.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Thin.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-ThinItalic.ttf') format('truetype');
+    font-style: italic;
+    font-weight: 200;
+    text-rendering: optimizeLegibility;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
     text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Italic.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Italic.ttf') format('truetype');
     font-style: italic;
     font-weight: 400;
     text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-Bold.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../font/Roboto-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: 700;
     text-rendering: optimizeLegibility;
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
-    src: url('../font/RobotoMono-BoldItalic.ttf') format('truetype');
+    font-family: 'Roboto';
+    src: url('../font/Roboto-BoldItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: 700;
     text-rendering: optimizeLegibility;
@@ -33,8 +49,8 @@
 :root {
     --global-font-size: 14px;
     --global-font-color: #444;
-    --mono-font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    --font-stack: Roboto Mono, Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --mono-font-stack: Roboto, Noto Sans KR;
+    --font-stack: Roboto, Noto Sans KR;
     --global-line-height: 1.6em;
     --page-width: 70em;
     --display-h1-decoration: 1;
@@ -90,10 +106,6 @@ h6,
 .h6 {
     font-family: var(--font-stack);
     clear: both;
-}
-
-h1 {
-    margin-bottom: 150px;
 }
 
 .content-column-content p,
@@ -161,7 +173,6 @@ figure {
 
 .footer {
     bottom: 0px;
-    margin-top: 50px;
     margin-bottom: 20px;
     padding-top: 5px;
     clear: both;
@@ -170,6 +181,8 @@ figure {
 }
 
 .image-grid {
+    margin-top: 20px;
+    margin-bottom: 40px;
     display: grid;
     grid-template-rows: auto;
     display: grid;
@@ -195,8 +208,9 @@ figure {
 }
 
 .posts-list {
+    margin-top: 14px;
     position: relative;
-    padding-left: 130px;
+    padding-left: 100px;
     top: 0;
 }
 
@@ -210,10 +224,12 @@ figure {
     display: inline-block;
     position: absolute;
     left: 0px;
-    width: 130px;
+    top: 1px;
+    width: 100px;
     z-index: 400;
     padding-top: 0;
 }
+
 
 @media only screen and (max-width: 850px) {
     .site-name {
@@ -240,10 +256,6 @@ figure {
         margin-right: 20px;
     }
 
-    .logo {
-        padding: calc(var(--global-space) * 1) 0 calc(var(--global-space) * 1);
-    }
-
     figure {
         margin-top: 5px;
         margin-bottom: 5px;
@@ -255,6 +267,10 @@ figure {
         position: relative;
         padding-left: 0;
         top: 0;
+    }
+
+    .posts-list h1 {
+        display: block;
     }
 
     .post h1, .post h2 {
@@ -274,22 +290,43 @@ figure {
 
 
     .footer {
-        margin-top: 50px;
         margin-bottom: 20px;
         padding-top: 5px;
         width: 100%;
         bottom: 0px;
         font-size: small;
     }
+
 }
 
 
 
-/* additional css customizations */
+/* additional css customizations by woogieboogie-jl */
 
 
 .container-main {
-    padding-top: 100px;
+    padding-top: 75px;
     min-height: 600px;
 }
+
+.box-main {
+    margin-bottom: 80px;
+}
+
+.box-main__last {
+    margin-bottom: 0px;
+}
+
+
+@media only screen and (max-width: 850px) {
+    .container-main {
+        padding-top: 100px;
+    }
+}
+
+
+
+
+/* ends here */
+
 

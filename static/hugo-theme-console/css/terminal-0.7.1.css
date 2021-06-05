@@ -1,5 +1,7 @@
 :root {
-    --global-font-size: 15px;
+    --global-font-size-small: 14px;
+    --global-font-size-medium: 16px;
+    --global-font-size-large: 18px;
     --global-line-height: 1.0em;
     --global-space: 10px;
     --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
@@ -30,7 +32,7 @@
     color: var(--invert-font-color);
 }
 body {
-    font-size: var(--global-font-size);
+    font-size: var(--global-font-size-small);
     color: var(--font-color);
     line-height: var(--global-line-height);
     margin: 0;
@@ -51,7 +53,7 @@ a:hover {
     color: var(--invert-font-color);
 }
 em {
-    font-size: var(--global-font-size);
+    font-size: var(--global-font-size-small);
     font-style: italic;
     font-family: var(--font-stack);
     color: var(--font-color);
@@ -72,16 +74,13 @@ blockquote, code, em, strong {
     position: relative;
     display: inline-block;
     display: table-cell;
-    padding: calc(var(--global-space) * 2) 0 calc(var(--global-space) * 2);
+    padding: calc(var(--global-space)) 0 calc(var(--global-space));
     margin: 0;
     overflow: hidden;
     font-weight: 600;
 }
-h1::after {
-    content: "====================================================================================================";
-    position: absolute;
-    bottom: 5px;
-    left: 0;
+h1 {
+    text-decoration: underline;
     display: var(--display-h1-decoration);
 }
 .logo+*, h1+* {
@@ -89,7 +88,6 @@ h1::after {
 }
 h2, h3, h4, h5, h6 {
     position: relative;
-    margin-bottom: var(--global-line-height);
     font-weight: 600;
 }
 blockquote {
@@ -139,12 +137,26 @@ pre code {
     min-width: 100%;
     font-family: var(--mono-font-stack);
 }
-.terminal .logo, .terminal blockquote, .terminal code, .terminal h1, .terminal h2, .terminal h3, .terminal h4, .terminal h5, .terminal h6, .terminal strong {
-    font-size: var(--global-font-size);
+.terminal .logo, .terminal blockquote, .terminal code, .terminal h3, .terminal h4, .terminal h5, .terminal h6 {
+    font-size: var(--global-font-size-small);
     font-style: normal;
     font-family: var(--font-stack);
     color: var(--font-color);
 }
+
+h1 {
+    font-size: var(--global-font-size-large);
+    font-style: normal;
+    font-family: var(--font-stack);
+    color: var(--font-color);
+}
+h2, .terminal-nav .logo{
+    font-size: var(--global-font-size-medium);
+    font-style: normal;
+    font-family: var(--font-stack);
+    color: var(--font-color);
+}
+
 .terminal-prompt {
     position: relative;
     white-space: nowrap;
@@ -223,18 +235,20 @@ ol ol {
     margin-bottom: 0;
 }
 .terminal-menu {
-    width: 100%}
+    width: 100%;
+    margin-bottom: 7px;
+}
 .terminal-nav {
     position: fixed;
     width: 100%;
-    padding: 0px 5%;
+    padding: 0px 6%;
     border-bottom: solid 1px;
     border-color: var(--secondary-color);
     display: flex;
     background-color: white;
     z-index: 10;
 }
-ul ul {
+ul {
     margin-top: 0;
     margin-bottom: 0;
 }
@@ -245,9 +259,8 @@ ul ul {
     flex-direction: column;
     width: 100%;
     flex-grow: 1;
-    font-size: var(--global-font-size);
+    font-size: var(--global-font-size-small);
     margin-top: 0;
-    margin-bottom: 10px;
 }
 .terminal-menu li {
     display: flex;
@@ -362,7 +375,7 @@ table {
     border-collapse: collapse;
     margin: var(--global-line-height) 0;
     color: var(--font-color);
-    font-size: var(--global-font-size);
+    font-size: var(--global-font-size-small);
 }
 table td, table th {
     vertical-align: top;
@@ -632,12 +645,15 @@ pre::-webkit-scrollbar {
     form {
     width: 100%}
 }@media only screen and (min-width:30em) {
+.terminal-menu {
+    margin: auto;
+}
+
 .terminal-menu ul {
     flex-direction: row;
     justify-items: flex-end;
     align-items: center;
     justify-content: flex-end;
-    margin-top: calc(var(--global-space) * 2);
 }
 .terminal-menu li {
     margin: 0;
