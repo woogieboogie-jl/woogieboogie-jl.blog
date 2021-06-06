@@ -4,6 +4,14 @@ title = "woogieboogie.dev"
 theme = "hugo-theme-console"
 hasCJKLanguage = true
 
+
+
+[markup.goldmark.renderer] 
+
+unsafe = true
+
+
+
 [params]
 
   # Set the animation style -- https://animate.style/

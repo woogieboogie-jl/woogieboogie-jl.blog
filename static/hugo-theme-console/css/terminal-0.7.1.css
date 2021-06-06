@@ -1,12 +1,15 @@
 :root {
+    --global-font-size-xsmall: 12px;
     --global-font-size-small: 14px;
     --global-font-size-medium: 16px;
     --global-font-size-large: 18px;
+    --global-font-size-xlarge: 20px;
     --global-line-height: 1.0em;
     --global-space: 10px;
     --font-stack: Roboto, Noto Sans KR;
-    --mono-font-stack: Roboto Mono;
+    --mono-font-stack: RobotoMono;
     --background-color: #fff;
+    --blockquote-background-color: #fff6ec;
     --page-width: 60em;
     --font-color: #151515;
     --invert-font-color: #fff;
@@ -32,7 +35,7 @@
     color: var(--invert-font-color);
 }
 body {
-    font-size: var(--global-font-size-small);
+    font-size: var(--global-font-size-xsmall);
     color: var(--font-color);
     line-height: var(--global-line-height);
     margin: 0;
@@ -53,7 +56,7 @@ a:hover {
     color: var(--invert-font-color);
 }
 em {
-    font-size: var(--global-font-size-small);
+    font-size: var(--global-font-size-xsmall);
     font-style: italic;
     font-family: var(--font-stack);
     color: var(--font-color);
@@ -91,39 +94,35 @@ h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 blockquote {
+    border: 1px solid var(--primary-color);
+    border-left: 6px solid var(--primary-color);
     margin: 15px 0px;
     position: relative;
-    padding: calc(var(--global-space) * 2);
+    padding: calc(var(--global-space) * 1);
     padding-left: calc(var(--global-space)*3);
     overflow: hidden;
-    background-color: #fff3e8;
+    background-color: var(--blockquote-background-color);
     border-radius: 5px;
 }
-blockquote::before {
-    content: ">";
-    position: absolute;
-    top: calc(var(--global-space) * 2);
-    left: 15px;
-    line-height: var(--global-line-height);
-    color: var(--secondary-color);
-}
+
 code {
-    padding: 3px 6px;
-    border-radius: 5px;
-    font-family: RobotoMono-Regular;
+    
+    padding: calc(var(--global-space) * 2);
+    font-family: RobotoMono;
+    font-size: var(--global-font-size-xsmall);
     font-weight: inherit;
-    background-color: #fff3e8;
 }
-pre code::after, pre code::before {
-    content: ""}
+
 pre {
     display: block;
     word-break: break-all;
     word-wrap: break-word;
-    color: var(--secondary-color);
-    background-color: var(--background-color);
-    border: 1px solid var(--secondary-color);
-    padding: var(--global-space);
+    color: var(--Primary-color);
+    background-color: var(--blockquote-background-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding-left: calc(var(--global-space)*1.5);
+    
     white-space: pre-wrap;
     white-space: -moz-pre-wrap;
     white-space: -pre-wrap;
@@ -131,27 +130,35 @@ pre {
 }
 pre code {
     overflow-x: scroll;
-    padding: 0;
     margin: 0;
     display: inline-block;
     min-width: 100%;
     font-family: var(--mono-font-stack);
 }
-.terminal .logo, .terminal blockquote, .terminal code, .terminal h3, .terminal h4, .terminal h5, .terminal h6 {
-    font-size: var(--global-font-size-small);
+.terminal .logo {
+    font-size: var(--global-font-size-medium);
+}
+
+.terminal h1 {
+    font-size: var(--global-font-size-xlarge);
     font-style: normal;
     font-family: var(--font-stack);
     color: var(--font-color);
 }
-
-h1 {
+.terminal h2{
     font-size: var(--global-font-size-large);
     font-style: normal;
     font-family: var(--font-stack);
     color: var(--font-color);
 }
-h2, .terminal-nav .logo{
+.terminal h3{
     font-size: var(--global-font-size-medium);
+    font-style: normal;
+    font-family: var(--font-stack);
+    color: var(--font-color);
+}
+.terminal h4{
+    font-size: var(--global-font-size-small);
     font-style: normal;
     font-family: var(--font-stack);
     color: var(--font-color);
@@ -161,6 +168,7 @@ h2, .terminal-nav .logo{
     position: relative;
     white-space: nowrap;
 }
+
 .terminal-prompt::before {
     content: "> "}
 .terminal-prompt::after {
@@ -312,12 +320,12 @@ ol.terminal-toc li a:hover {
 hr {
     position: relative;
     overflow: hidden;
-    margin: calc(var(--global-space) * 4) 0;
+    margin: calc(var(--global-space) * 2) 0;
     border: 0;
-    border-bottom: 1px dashed var(--secondary-color);
+    border-bottom: 1px solid var(--secondary-color);
 }
 p {
-    margin: 0 0 var(--global-line-height);
+    margin: 0px;
     color: var(--global-font-color);
 }
 .container {
@@ -356,7 +364,7 @@ img {
     color: var(--progress-bar-fill);
     content: attr(data-filled);
     display: block;
-    font-size: 12px;
+    font-size: var(--global-font-size-small);
     white-space: nowrap;
     position: absolute;
     border: 6px solid transparent;
@@ -375,7 +383,7 @@ table {
     border-collapse: collapse;
     margin: var(--global-line-height) 0;
     color: var(--font-color);
-    font-size: var(--global-font-size-small);
+    font-size: var(--global-font-size-xsmall);
 }
 table td, table th {
     vertical-align: top;
@@ -393,10 +401,6 @@ table tfoot tr th {
 table caption {
     font-size: 1em;
     margin: 0 0 1em 0;
-}
-table tbody td:first-child {
-    font-weight: 700;
-    color: var(var(--secondary-color));
 }
 .form {
     width: 100%}

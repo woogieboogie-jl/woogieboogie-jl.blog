@@ -47,7 +47,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'RobotoMono';
     src: url('../font/RobotoMono-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
@@ -55,7 +55,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'RobotoMono';
     src: url('../font/RobotoMono-Italic.ttf') format('truetype');
     font-style: italic;
     font-weight: 400;
@@ -63,7 +63,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'RobotoMono';
     src: url('../font/RobotoMono-Bold.ttf') format('truetype');
     font-style: normal;
     font-weight: 700;
@@ -71,7 +71,7 @@
 }
 
 @font-face {
-    font-family: 'Roboto Mono';
+    font-family: 'RobotoMono';
     src: url('../font/RobotoMono-BoldItalic.ttf') format('truetype');
     font-style: italic;
     font-weight: 700;
@@ -82,7 +82,7 @@
 :root {
     --global-font-size: 14px;
     --global-font-color: #444;
-    --mono-font-stack: Roboto Mono;
+    --mono-font-stack: RobotoMono;
     --font-stack: Roboto, Noto Sans KR;
     --global-line-height: 1.6em;
     --page-width: 70em;

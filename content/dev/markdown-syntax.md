@@ -4,97 +4,205 @@ date: 2021-06-04T22:26:01+09:00
 draft: true
 ---
 
-> hello world!hello world!hello world!hello world!hello world!hello world!hello world!hello world!hello world!hello ***world!hello*** world!hello world!hello world!hello world!
+
+> This post demonstrates basic markdown syntaxes.  
+All references come from: [Markdown Guide](https://www.markdownguide.org/basic-syntax/) & [마크다운 문법](https://simhyejin.github.io/2016/06/30/Markdown-syntax/)
 
 
+---
 
 
+<br>
+
+## 1. Headings
+
+MARKDOWN        |RESULTS         
+----------------|-------------------
+`# Heading 1`   |<h1 style="text-decoration:none;">Heading 1</h1>
+`## Heading 2`  |<h2>Heading 2</h2>
+`### Heading 3` |<h3>Heading 3</h3>
+`#### Heading 4`|<h4>Heading 4</h4>
+
+\
+\.
+
+## 2. Paragraphs
+
+MARKDOWN        |RESULTS         
+----------------|-------------------
+`Hello, I'm woogieboogie. My former major is arhcitecutre, but I just started coding to build things online! I'm a crypto enthusiast and love house music (especially the ones from france - french house.)`   | Hello, I'm woogieboogie. My former major is arhcitecutre, but I just started coding to build things online! I'm a crypto enthusiast and love house music (especially the ones from france - french house.)
+
+\
+\.
+
+## 3. Line Breaks
+
+MARKDOWN        |RESULTS         
+----------------|-------------------
+`This is the first line` >**spacebar*2 + return**< `And this is the second line`   | This is the first line. <br/> And this is the second line
+
+\
+\.
+
+## 4. Emphasis
+Type         |MARKDOWN           |RESULTS         
+-------------|-------------------|-------------------
+Bold         |`**Hello World**`  |**Hello World**
+Italic       |`*Hello World*`    |*Hello World*
+Bold & Italic|`***Hello World***`|***Hello World***
+
+\
+\.
+
+## 5. Blockquotes
+> To create Blockquotes: &nbsp; **just type ">" in front and that will do the magic.** <br>
+> To continue blockquote with a **long paragraph, just continue to type ">" every line in front.**
+
+\
+\.
+
+## 6. Nested Blockquotes & with other Elements
+To create nested Blockquotes:
+```
+> Blockquotes can be nested by adding another ">", meaning you will have to add ">>"
+>> This would be the nested blockquotes. So easy.
+```
+
+Results are:
+> Blockquotes can be nested by adding another ">", meaning you will have to add ">>" before starting your line.
+>> This would be the nested blockquotes. So easy.
+
+Blockquotes can contain other Markdown formatted elements,<br>
+***BUT NOT ALL - you need to examine which elements works nested in blockquotes.**
+> Blockquotes can contain other elements:
+>>`` ``` ``<br>
+`def python:`<br>
+`print(x)`<br>
+`` ``` ``
+>>> - As well as unordered lists
+>>>> * Can be nested easily!
+
+\
+\.
+
+## 7. Lists
+Type            |MARKDOWN           |RESULTS         
+----------------|-------------------|-------------------
+Ordered Lists   |`1. First list`<br>`2. Second list`<br>`3. Third list`<br>`4. Fourth list`   |1. First list<br>2. Second list<br>3. Third list<br>4. Fourth list
+Unordered Lists |`* First list`<br>`* Second list`<br>`* Third list`<br>`* Fourth list`       |- First list<br>- Second list<br>- Third list<br>- Fourth list
+Indented Lists  |`1. First item`<br>`2. Second item`<br>`3. Third item`<br>&nbsp;&nbsp;&nbsp;&nbsp;`1. Indented item`<br>&nbsp;&nbsp;&nbsp;&nbsp;`2. Indented item`<br>`4. Fourth item`|<ol style="margin:0px;"><li>First item</li><li>Second item</li><li>Third item<ol><li>Indented item</li><li>Indented item</li></ol></li><li>Fourth item</li></ol>
+
+\
+\.
+
+## 8. Lists - Elements in Lists
+> **Preserve a line in between & Indent the element four spaces(or a tab)** to add another element in a list while preserving the coninuity of the list.
+
+```
+*   This is the first list item.
+*   Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+    > A blockquote would look great below the second list item.
+
+*   And here's the third list item.
+```
+The results are:
+
+*   This is the first list item.
+*   Here's the second list item.
+
+    I need to add another paragraph below the second list item.
+    > A blockquote would look great below the second list item.
+
+*   And here's the third list item.
+
+\
+\.
+
+## 9. Code & Code Blocks
+TYPE       | MARKDOWN              |RESULTS         
+-----------|-----------------------|-----------------
+Code       |`` `print(a+b)` ``     | `print(a+b)` 
+Code Blocks|&nbsp;&nbsp;&nbsp;&nbsp;`<div>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<html>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`<head>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</head>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`</html>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;`</div>` <br>**four spaces / tab indentation before each line* | `<div>`<br>  &nbsp;&nbsp;`<html>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;`<head>`<br>  &nbsp;&nbsp;&nbsp;&nbsp;`</head>`<br>  &nbsp;&nbsp;`</html>`<br>`</div>`<br>**spaces excluded & html tags are not rendered and showed as raw tags.*
+
+> We can also use **triple backtics** to render code blocks.
+> Just wrap your code block with triple backtics and it's done.<br>
+<br>`` ``` ``<br>def __init__():<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;print(a+b)<br>`` ``` ``
 
 
+And the result would be:
+```
+def init(a,b):
+    print(a+b)
+```
 
+\
+\.
 
+## 10. Tables
+> To create Tables: <br><br> Header 1  | Header 2 <br> ----------------- | --------------- <br> Content 1 | Content 3<br>Content 2 | Content 4
 
+Results are:
+Header 1  | Header 2
+--------- | ---------
+Content 1 | Content 3
+Content 2 | Content 4
 
+\
+\.
 
-This post demonstrates basics about markdown language syntax.
-All references come from:  
-[Markdown Guide](https://https://www.markdownguide.org/basic-syntax/) & 
-[마크다운 문법](https://simhyejin.github.io/2016/06/30/Markdown-syntax/)
-  
+## 11. Horizontal Rules
 
-## Basic Syntax
-  
+> `***` | `---` creates Horizontal Rules as shown below:
+***
 
-| 값 | 의미 | 기본값 |
-|---|:---:|---:|
-| `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
-| `relative` | 요소 자신을 기준으로 배치 |  |
-| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
-| `fixed` | 브라우저 창을 기준으로 배치 |  |
+\
+\.
 
-값 | 의미 | 기본값
----|:---:|---:
-`static` | 유형(기준) 없음 / 배치 불가능 | `static`
-`relative` | 요소 **자신**을 기준으로 배치 |
-`absolute` | 위치 상 **_부모_(조상)요소**를 기준으로 배치 |
-`fixed` | **브라우저 창**을 기준으로 배치 |
+## 12. Links
+MARKDOWN        |RESULTS         
+----------------|-------------------
+`[woogieboogie.dev](woogieboogie-jl.github.io)`|[woogieboogie.dev](https://woogieboogie-jl.github.io)
 
-1. one
-2. two
-3. three
+\
+\.
 
-* unordered list1
-* unordered list2
-* unordered list3
+## 13. Images
+> Assuming a wanted image file is in path(relative) "/images/Seoul.jpg", format below will render the image:<br>
+>> **`![Seoul, the cyberpunk village](/images/Seoul.jpg)`**
 
-this may look  real, but trust me, *it was not true*
+![Seoul, the cyberpunk village](/images/Seoul.jpg)
 
-print(a+b)
+>To add a link to an image, enclose the Markdown for the image in brackets, and then add the link in parentheses.
+>> **`[![woogieboogie's blog!](/images/logo.png)](https://woogieboogie-jl.github.io)`**
 
+[![woogieboogie's blog!](/images/logo.png)](https://woogieboogie-jl.github.io)
 
-`print(a+b)`
+\
+\.
 
-#### Headings
-| MARKDOWN    |      RESULTS |
-|-----------------|-----------------|
-| `# Heading 1`   | # Heading 1     |
-| `## Heading 2`  | ## Heading 2    |
-| `### Heading 3` | ### Heading 3   |
-| `#### Heading 4`| #### Heading 4  |
+## 14. Escaping Characters
+>If you want to denote certain phrase / word and the whole phrase includes one or more bactticks, 
+>Try to enclose the phrase with double backticks (``)
 
+MARKDOWN        |RESULTS         
+----------------|-------------------
+``Use `code` in your Markdown file``<span>``</span> |``Use `code` in your markdown file``
 
-| 값 | 의미 | 기본값 |
-|---|:---:|---:|
-| `static` | 유형(기준) 없음 / 배치 불가능 | `static` |
-| `relative` | 요소 자신을 기준으로 배치 |  |
-| `absolute` | 위치 상 부모(조상)요소를 기준으로 배치 |  |
-| `fixed` | 브라우저 창을 기준으로 배치 |  |
+\
+\.
 
-#### Paragraphs
-#### Line Breaks
-#### Emphasis - Bold
-#### Emphasis - Italic
-#### Emphasis - Bold & Italic
-#### Blockquotes / Blockquotes with multiple Paragraphs
-#### Nested Blockquotes
-#### Blockquotes with other Elements
-#### Lists
-#### Lists - Ordered Lists
-#### Lists - Unordered Lists
-#### Lists - Elements in Lists
-#### Code
-#### Tables
-
-
-
-
-#### Horizontal Rules
-#### Links
-#### Reference-style Links
-#### Images
-#### Escaping Characters
-#### HTML
+## 15. HTML
  
+> You can use HTML tags in many Markdown apps (including Hugo's Goldmark). There are situations where using HTML tags is much more productive then to continue on endless markdown formatting. Changing image sizes, Nested contents in ables, and etc.. there will be much more options if you can mix them wisely. <br>
+><br>
+> **You can just place the tags in the text of your Markdown-formatted file to use HTML tags:**
+>>`This **word** is bold. This <em>word</em> is italic.`
 
+#### Results:
+>This word is bold. This *word* is italic.
 
+\
+\.
 
