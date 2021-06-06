@@ -4,8 +4,8 @@
     --global-font-size-large: 18px;
     --global-line-height: 1.0em;
     --global-space: 10px;
-    --font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
-    --mono-font-stack: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono, Bitstream Vera Sans Mono, Courier New, monospace, serif;
+    --font-stack: Roboto, Noto Sans KR;
+    --mono-font-stack: Roboto Mono;
     --background-color: #fff;
     --page-width: 60em;
     --font-color: #151515;
@@ -91,28 +91,28 @@ h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 blockquote {
+    margin: 15px 0px;
     position: relative;
-    padding-left: calc(var(--global-space) * 2);
-    padding-left: 2ch;
+    padding: calc(var(--global-space) * 2);
+    padding-left: calc(var(--global-space)*3);
     overflow: hidden;
+    background-color: #fff3e8;
+    border-radius: 5px;
 }
-blockquote::after {
-    content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
-    white-space: pre;
+blockquote::before {
+    content: ">";
     position: absolute;
-    top: 0;
-    left: 0;
+    top: calc(var(--global-space) * 2);
+    left: 15px;
     line-height: var(--global-line-height);
-    color: #9ca2ab;
+    color: var(--secondary-color);
 }
 code {
+    padding: 3px 6px;
+    border-radius: 5px;
+    font-family: RobotoMono-Regular;
     font-weight: inherit;
-    background-color: var(--code-bg-color);
-    font-family: var(--mono-font-stack);
-}
-code::after, code::before {
-    content: "`";
-    display: inline;
+    background-color: #fff3e8;
 }
 pre code::after, pre code::before {
     content: ""}
