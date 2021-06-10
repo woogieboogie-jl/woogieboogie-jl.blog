@@ -1,5 +1,5 @@
 ---
-title: "Markdown Syntax"
+title: "Markdown Syntax - Basics"
 date: 2021-06-04T22:26:01+09:00
 draft: false
 ---

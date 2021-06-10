@@ -250,17 +250,16 @@ figure {
 .post h1, .post h2 {
     padding-top: 0;
     margin: 0;
-    margin-bottom: 5px;
 }
 
-.posts-list .date {
-    display: inline-block;
+.posts-title {
+    display: flex;
+    align-items: center;
+}
+
+.posts-title .date {
     position: absolute;
-    left: 0px;
-    top: 1px;
-    width: 100px;
-    z-index: 400;
-    padding-top: 0;
+    left: 0;
 }
 
 

@@ -6,15 +6,22 @@
 <div class="posts-list">
 {{ range sort .Data.Pages "Date" "desc" }}
     {{ if not .Params.private }}
-        <div class="post">
-            <p>
-                <div class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</div>    
-                <h1><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h1>
-                {{ .Summary }}
-            </p>
+    <div class="post">
+        <div class="posts-title">
+            <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+            <span class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</span>
         </div>
+        <p>{{ .Summary }}
+            {{ if .Truncated }}
+            <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+            <a href="{{ .RelPermalink }}"> ....read more</a>
+            {{ end }}
+        </p>
+    </div>    
     {{ end }}
 {{ end }}
 </div>
 
 {{ end }}
+
+
