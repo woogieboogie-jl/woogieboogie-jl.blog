@@ -6,7 +6,7 @@
 <div class="posts-list">
 {{ range sort .Data.Pages "Date" "desc" }}
     {{ if not .Params.private }}
-    <div class="post">
+    <div class="box-post">
         <div class="posts-title">
             <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
             <span class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</span>
