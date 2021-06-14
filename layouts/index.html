@@ -6,6 +6,7 @@
     {{ with .Site.GetPage "/dev" }}
         {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
             <div class="dev">
+                <div class="box-post">
                 <div class="posts-title">
                     <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
                     <span class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</span>
@@ -16,6 +17,7 @@
                     <a href="{{ .RelPermalink }}"> ....read more</a>
                     {{ end }}
                 </p>
+                </div>
             </div>    
         {{ end }}
     {{ end }}

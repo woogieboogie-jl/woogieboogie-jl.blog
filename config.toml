@@ -3,6 +3,7 @@ languageCode = "en-us"
 title = "woogieboogie.dev"
 theme = "hugo-theme-console"
 hasCJKLanguage = true
+summaryLength = 40
 
 
 

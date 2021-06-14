@@ -23,8 +23,8 @@ MARKDOWN        |RESULTS
 `### Heading 3` |<h3>Heading 3</h3>
 `#### Heading 4`|<h4>Heading 4</h4>
 
-\
-\.
+ <br />
+ <br />
 
 ## 2. Paragraphs
 
@@ -32,8 +32,8 @@ MARKDOWN        |RESULTS
 ----------------|-------------------
 `Hello, I'm woogieboogie. My former major is arhcitecutre, but I just started coding to build things online! I'm a crypto enthusiast and love house music (especially the ones from france - french house.)`   | Hello, I'm woogieboogie. My former major is arhcitecutre, but I just started coding to build things online! I'm a crypto enthusiast and love house music (especially the ones from france - french house.)
 
-\
-\.
+ <br />
+ <br />
 
 ## 3. Line Breaks
 
@@ -41,8 +41,8 @@ MARKDOWN        |RESULTS
 ----------------|-------------------
 `This is the first line` >**spacebar*2 + return**< `And this is the second line`   | This is the first line. <br/> And this is the second line
 
-\
-\.
+ <br />
+ <br />
 
 ## 4. Emphasis
 Type         |MARKDOWN           |RESULTS         
@@ -51,15 +51,15 @@ Bold         |`**Hello World**`  |**Hello World**
 Italic       |`*Hello World*`    |*Hello World*
 Bold & Italic|`***Hello World***`|***Hello World***
 
-\
-\.
+ <br />
+ <br />
 
 ## 5. Blockquotes
 > To create Blockquotes: &nbsp; **just type ">" in front and that will do the magic.** <br>
 > To continue blockquote with a **long paragraph, just continue to type ">" every line in front.**
 
-\
-\.
+ <br />
+ <br />
 
 ## 6. Nested Blockquotes & with other Elements
 To create nested Blockquotes:
@@ -82,8 +82,8 @@ Blockquotes can contain other Markdown formatted elements,<br>
 >>> - As well as unordered lists
 >>>> * Can be nested easily!
 
-\
-\.
+ <br />
+ <br />
 
 ## 7. Lists
 Type            |MARKDOWN           |RESULTS         
@@ -92,8 +92,8 @@ Ordered Lists   |`1. First list`<br>`2. Second list`<br>`3. Third list`<br>`4. F
 Unordered Lists |`* First list`<br>`* Second list`<br>`* Third list`<br>`* Fourth list`       |- First list<br>- Second list<br>- Third list<br>- Fourth list
 Indented Lists  |`1. First item`<br>`2. Second item`<br>`3. Third item`<br>&nbsp;&nbsp;&nbsp;&nbsp;`1. Indented item`<br>&nbsp;&nbsp;&nbsp;&nbsp;`2. Indented item`<br>`4. Fourth item`|<ol style="margin:0px;"><li>First item</li><li>Second item</li><li>Third item<ol><li>Indented item</li><li>Indented item</li></ol></li><li>Fourth item</li></ol>
 
-\
-\.
+ <br />
+ <br />
 
 ## 8. Lists - Elements in Lists
 > **Preserve a line in between & Indent the element four spaces(or a tab)** to add another element in a list while preserving the coninuity of the list.
@@ -117,8 +117,8 @@ The results are:
 
 *   And here's the third list item.
 
-\
-\.
+ <br />
+ <br />
 
 ## 9. Code & Code Blocks
 TYPE       | MARKDOWN              |RESULTS         
@@ -137,8 +137,8 @@ def init(a,b):
     print(a+b)
 ```
 
-\
-\.
+ <br />
+ <br />
 
 ## 10. Tables
 > To create Tables: <br><br> Header 1  | Header 2 <br> ----------------- | --------------- <br> Content 1 | Content 3<br>Content 2 | Content 4
@@ -149,24 +149,24 @@ Header 1  | Header 2
 Content 1 | Content 3
 Content 2 | Content 4
 
-\
-\.
+ <br />
+ <br />
 
 ## 11. Horizontal Rules
 
 > `***` | `---` creates Horizontal Rules as shown below:
 ***
 
-\
-\.
+ <br />
+ <br />
 
 ## 12. Links
 MARKDOWN        |RESULTS         
 ----------------|-------------------
 `[woogieboogie.dev](woogieboogie-jl.github.io)`|[woogieboogie.dev](https://woogieboogie-jl.github.io)
 
-\
-\.
+ <br />
+ <br />
 
 ## 13. Images
 > Assuming a wanted image file is in path(relative) "/images/Seoul.jpg", format below will render the image:<br>
@@ -179,8 +179,8 @@ MARKDOWN        |RESULTS
 
 [![woogieboogie's blog!](/images/logo.png)](https://woogieboogie-jl.github.io)
 
-\
-\.
+ <br />
+ <br />
 
 ## 14. Escaping Characters
 >If you want to denote certain phrase / word and the whole phrase includes one or more bactticks, 
@@ -190,8 +190,8 @@ MARKDOWN        |RESULTS
 ----------------|-------------------
 ``Use `code` in your Markdown file``<span>``</span> |``Use `code` in your markdown file``
 
-\
-\.
+ <br />
+ <br />
 
 ## 15. HTML
  
@@ -203,6 +203,6 @@ MARKDOWN        |RESULTS
 #### Results:
 >This word is bold. This *word* is italic.
 
-\
-\.
+ <br />
+ <br />
 
