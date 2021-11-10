@@ -49,9 +49,9 @@
 
 
 <div class="box-main__last">
-    <h1>#Photos</h1>
+    <h1>#P_logs</h1>
     <div class="image-grid">
-    {{ with .Site.GetPage "/photos" }}
+    {{ with .Site.GetPage "/p_log" }}
         {{ range first 3 (sort .Data.Pages "Date" "desc")}}
             <a href="{{ .Permalink }}" title="{{ .Title }}">
             {{ $image := .Page.Resources.GetMatch .Params.image }}
