@@ -2,11 +2,19 @@
 date = "2016-11-05T21:05:33+05:30"
 title = "About"
 +++
+<br>
 
-A minimal, responsive and light theme for Hugo inspired by Linux console. 
 
-![Console](https://github.com/mrmierzejewski/hugo-theme-console/blob/master/images/preview.png?raw=true)
+    - 👋 Hi, I’m @woogieboogie, based in Seoul, South Korea
+    - 🌱 Currently In Crypto, studied Architecture(engineering) and CS in Uni, sometimes code to work efficiently
+    - 📫 Currently Leading the Token Engineering Squad at Xangle and mainly build products but sometimes do research(In-general, DeFi-rel Infrastructures - like LSPs, Tokenomics(Core) staking, etc..)
+  **Some of my recent research articles are**:
+  - [Liquid Staking Competition Set to Heat Up After Shanghai ]( https://xangle.io/en/research/detail/1129),
+  - [Exploring Liquid Staking: A Comprehensive Guide to Understanding the Concept](https://xangle.io/en/research/detail/1070),
+  - [Circulating Supply: The Canary in the Crypto Mine](https://xangle.io/en/research/detail/1672)
 
+
+---
 ## Installation
 
 ```
