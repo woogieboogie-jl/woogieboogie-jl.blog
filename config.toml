@@ -1,6 +1,6 @@
 baseURL = "https://woogieboogie-jl.github.io"
 languageCode = "en-us"
-title = "woogieboogie"
+title = "woogieboogie-jl"
 theme = "hugo-theme-console"
 hasCJKLanguage = true
 summaryLength = 40
