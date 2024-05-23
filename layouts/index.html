@@ -1,5 +1,30 @@
 {{ define "main" }}
 
+
+<div class="box-main">
+    <h1>#Crypto</h1>
+    <div class="posts-list">
+    {{ with .Site.GetPage "/crypto" }}
+        {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
+        <div class="crypto">
+            <div class="posts-title">
+                <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
+                <span class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</span>
+            </div>
+            <p>{{ .Summary }}
+                {{ if .Truncated }}
+                <!-- This <div> includes a read more link, but only if the summary is truncated... -->
+                <a href="{{ .RelPermalink }}"> ....read more</a>
+                {{ end }}
+            </p>
+        </div>     
+        {{ end }}
+    {{ end }}
+    </div>
+</div>
+
+
+
 <div class="box-main">
     <h1>#Development</h1>
     <div class="posts-list">
@@ -24,28 +49,6 @@
     </div>
 </div>
 
-
-<div class="box-main">
-    <h1>#Cryptocurrencies</h1>
-    <div class="posts-list">
-    {{ with .Site.GetPage "/crypto" }}
-        {{ range first 3 (sort .Data.Pages "Date" "desc" (where .Pages ".Params.private" "!=" true))}}
-        <div class="crypto">
-            <div class="posts-title">
-                <h2><a href="{{ .Permalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
-                <span class="date">{{ .PublishDate.Format "Jan. 2, 2006" }}</span>
-            </div>
-            <p>{{ .Summary }}
-                {{ if .Truncated }}
-                <!-- This <div> includes a read more link, but only if the summary is truncated... -->
-                <a href="{{ .RelPermalink }}"> ....read more</a>
-                {{ end }}
-            </p>
-        </div>     
-        {{ end }}
-    {{ end }}
-    </div>
-</div>
 
 
 <div class="box-main__last">
